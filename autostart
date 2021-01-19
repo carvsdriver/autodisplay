@@ -1,0 +1,20 @@
+#
+#/etc/xdg/lxsession/LXDE-pi/autostart
+#
+#This will disable the blank display and launch 
+#the kiosk.sh script which fires up raspberrypints automatically
+#as well as running the PIR script
+#
+#Update as necessary for your script paths as noted below.
+#
+
+@unclutter -idle 5 -root
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xset s off
+@xset -dpms
+@xset s noblank
+
+#these two lines should point to where you have your scripts
+@/home/pi/scripts/kiosk.sh
+@python /home/pi/scripts/display.py
