@@ -8,7 +8,7 @@ from subprocess import call
  
 io.setmode(io.BCM)
 SHUTOFF_DELAY = 120  # seconds
-PIR_PIN = 17        # Pin 11 on the board
+PIR_PIN = 17         # Pin 11 on the board - change this to where you have your pir connected if different.
  
 io.setup(PIR_PIN, io.IN)
 turned_off = True
